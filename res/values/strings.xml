@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">番茄快长</string>
+    <string name="welcome">早！</string>
+    <string name="add_hint">新建</string>
+    <string name="add_task_hint">成长任务</string>
+    <string name="add_class_hint">成长方向</string>
+    <string name="add_reward_hint">成长奖励</string>
+    <string name="else_hint">其他</string>
+    <string name="setting_hint">设置</string>
+    <string name="about_hint">关于</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
