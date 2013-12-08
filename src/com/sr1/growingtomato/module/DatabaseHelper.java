@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public static final String CLASSES_NAME = "name";
 	public static final String CLASSES_ADD_DATE = "addDate";
 	public static final String CLASSES_END_DATE = "endDate";
-	public static final String CLASSES__IS_FINISHED = "isFinished";
+	public static final String CLASSES_IS_FINISHED = "isFinished";
 
 	private static final String CREATE_TABLE_CLASSES = "CREATE TABLE IF NOT EXISTS classes ("
 			+ "id INTEGER PRIMARY KEY, "
@@ -47,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			+ "addDate DATETIME NOT NULL DEFAULT (datetime('now','localtime')), "
 			+ "endDate DATETIME NOT NULL DEFAULT 0, "
 			+ "isFinished BOOLEAN DEFAULT false);";
-	private static final String CLASSES_SAMPLE_DATA = "INSERT INTO `classes` (name) VALUES ('综合');";
+	private static final String CLASSES_SAMPLE_DATA = "INSERT INTO `classes` (name) VALUES ('全面发展');";
 
 	public DatabaseHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
