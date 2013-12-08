@@ -1,15 +1,19 @@
 package com.sr1.growingtomato.module;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.text.format.DateFormat;
+import android.text.method.DateTimeKeyListener;
+import android.util.Log;
 
 import com.sr1.growingtomato.entity.Reward;
 import com.sr1.growingtomato.entity.Task;
+import com.sr1.growingtomato.util.DateUtil;
 
 public class TaskModule {
 
@@ -61,13 +65,11 @@ public class TaskModule {
 		SQLiteDatabase database = new DatabaseHelper(context)
 				.getWritableDatabase();
 		
-		String date = String.valueOf(DateFormat.format("yyyy-MM-dd hh:mm:ss", System.currentTimeMillis()));
-		
 		// set data which will insert into database
 		String table = DatabaseHelper.TASKS;
 		ContentValues values = new ContentValues();
 		values.put(DatabaseHelper.TASKS_REWARD, reward.getName());
-		values.put(DatabaseHelper.TASKS_END_DATE, date);
+		values.put(DatabaseHelper.TASKS_END_DATE, DateUtil.now());
 		values.put(DatabaseHelper.TASKS_IS_FINISHED, "true");
 		String whereClause = DatabaseHelper.TASKS_ID + "=?";
 		String whereArgs[] = { String.valueOf(taskId) };

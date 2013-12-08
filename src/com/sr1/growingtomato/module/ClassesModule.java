@@ -6,9 +6,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.text.format.DateFormat;
 
 import com.sr1.growingtomato.entity.Class;
+import com.sr1.growingtomato.util.DateUtil;
 
 public class ClassesModule {
 
@@ -80,14 +80,11 @@ public class ClassesModule {
 	public void setClassFinish(int classId) {
 		SQLiteDatabase database = new DatabaseHelper(context)
 				.getWritableDatabase();
-
-		String date = String.valueOf(DateFormat.format("yyyy-MM-dd hh:mm:ss",
-				System.currentTimeMillis()));
-
+		
 		// set data which will insert into database
 		String table = DatabaseHelper.CLASSES;
 		ContentValues values = new ContentValues();
-		values.put(DatabaseHelper.CLASSES_END_DATE, date);
+		values.put(DatabaseHelper.CLASSES_END_DATE, DateUtil.now());
 		values.put(DatabaseHelper.CLASSES_IS_FINISHED, "true");
 		String whereClause = DatabaseHelper.CLASSES_ID + "=?";
 		String whereArgs[] = { String.valueOf(classId) };
