@@ -4,6 +4,7 @@ public class Task {
 
 	int id;
 	String name;
+	String remark;
 	String addDate;
 	String endDate;
 	boolean isFinished;
@@ -12,6 +13,14 @@ public class Task {
 
 	public int getId() {
 		return id;
+	}
+
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
 
 	public void setId(int id) {

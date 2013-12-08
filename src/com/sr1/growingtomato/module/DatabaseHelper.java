@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String TASKS = "TASKS";
 	public static final String TASKS_ID = "id";
 	public static final String TASKS_NAME = "name";
+	public static final String TASKS_REMARK = "remark";
 	public static final String TASKS_ADD_DATE = "addDate";
 	public static final String TASKS_END_DATE = "endDate";
 	public static final String TASKS_IS_FINISHED = "isFinished";
@@ -26,6 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			"CREATE TABLE IF NOT EXISTS tasks (" +
 			"id INTEGER PRIMARY KEY, " +
 			"name TEXT NOT NULL, " +
+			"remark TEXT, " +
 			"addDate DATETIME NOT NULL DEFAULT (datetime('now','localtime')), " +
 			"endDate DATETIME NOT NULL DEFAULT 0, " +
 			"isFinished BOOLEAN DEFAULT false, " +
