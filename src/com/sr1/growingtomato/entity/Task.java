@@ -8,7 +8,7 @@ public class Task {
 	String endDate;
 	boolean isFinished;
 	int classId;
-	String Reward;
+	String reward;
 
 	public int getId() {
 		return id;
@@ -59,18 +59,18 @@ public class Task {
 	}
 
 	public String getReward() {
-		return Reward;
+		return reward;
 	}
 
 	public void setReward(String reward) {
-		Reward = reward;
+		this.reward = reward;
 	}
 
 	@Override
 	public String toString() {
 		return "Task [id=" + id + ", name=" + name + ", addDate=" + addDate
 				+ ", endDate=" + endDate + ", isFinished=" + isFinished
-				+ ", classId=" + classId + ", Reward=" + Reward + "]";
+				+ ", classId=" + classId + ", reward=" + reward + "]";
 	}
 
 }
