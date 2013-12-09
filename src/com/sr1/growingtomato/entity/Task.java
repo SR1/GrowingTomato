@@ -1,7 +1,10 @@
 package com.sr1.growingtomato.entity;
 
-public class Task {
+import java.io.Serializable;
 
+public class Task implements Serializable{
+
+	private static final long serialVersionUID = -7453662248653278513L;
 	int id;
 	String name;
 	String remark;

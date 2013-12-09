@@ -1,15 +1,11 @@
 package com.sr1.growingtomato.module;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.text.method.DateTimeKeyListener;
-import android.util.Log;
 
 import com.sr1.growingtomato.entity.Reward;
 import com.sr1.growingtomato.entity.Task;
