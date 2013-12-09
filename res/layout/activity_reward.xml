@@ -5,6 +5,24 @@
     tools:context=".RewardActivity" >
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="endPickReward"
+            android:text="确认" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/pickLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,19 +40,23 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="1"
-                android:onClick="pick" />
+                android:background="@color/FLAT_ORANGE"
+                android:gravity="center"
+                android:onClick="pick"
+                android:text="1" />
 
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="2"
-                android:onClick="pick" />
+                android:background="@color/FLAT_ORANGE"
+                android:gravity="center"
+                android:onClick="pick"
+                android:text="2" />
         </LinearLayout>
 
         <LinearLayout
@@ -43,19 +65,23 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="3"
-                android:onClick="pick" />
+                android:background="@color/FLAT_ORANGE"
+                android:gravity="center"
+                android:onClick="pick"
+                android:text="3" />
 
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="4"
-                android:onClick="pick" />
+                android:background="@color/FLAT_ORANGE"
+                android:gravity="center"
+                android:onClick="pick"
+                android:text="4" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,35 +90,24 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="5"
-                android:onClick="pick" />
+                android:background="@color/FLAT_ORANGE"
+                android:gravity="center"
+                android:onClick="pick"
+                android:text="5" />
 
-            <TextView
+            <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="6"
-                android:onClick="pick" />
+                android:background="@color/FLAT_ORANGE"
+                android:gravity="center"
+                android:onClick="pick"
+                android:text="6" />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
-        <TextView
-            android:id="@+id/reward"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:onClick="endPickReward"
-            android:text="确认"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </FrameLayout>
