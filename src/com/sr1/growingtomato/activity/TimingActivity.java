@@ -79,6 +79,7 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 	public void onTimeUp() {
 		media.stopPlayTicTac();
 		media.playChime();
+		stopUpdateView();
 		String message = getResources().getString(R.string.finish_a_task);
 		Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 		Intent intent = new Intent(this, RewardActivity.class);

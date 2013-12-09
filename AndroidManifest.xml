@@ -27,6 +27,8 @@
         </activity>
         <activity android:name="com.sr1.growingtomato.activity.TimingActivity" >
         </activity>
+        <activity android:name="com.sr1.growingtomato.activity.RewardActivity" >
+        </activity>
     </application>
 
 </manifest>
