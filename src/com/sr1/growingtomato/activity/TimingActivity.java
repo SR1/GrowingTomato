@@ -44,6 +44,7 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 		screenOn = new ScreenOnModel(this);
 		handler = new ValidateViewHandler(this);
 		timer = new Timer();
+		timer.setOnTimeUpListener(this);
 
 		giveupBtn.setOnLongClickListener(this);
 		timer.startTimer();
