@@ -74,9 +74,9 @@
 
         <Button
             android:id="@+id/sounds"
-            android:onClick="soundsTroggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="soundsTroggle"
             android:text="关闭声音" />
 
         <Button

@@ -5,7 +5,7 @@ public class Timer extends Thread implements TimerControllerInterface {
 	public static final String TAG = "Timer";
 
 	private long startTime;
-	private long duringTime = 25 * 60 * 1000;
+	private long duringTime = 1*60*1000;//25 * 60 * 1000;
 
 	private boolean isStart = false;
 	private OnTimeUpListener listener;

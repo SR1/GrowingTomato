@@ -2,7 +2,6 @@ package com.sr1.growingtomato.controller;
 
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 public class ValidateViewHandler extends Handler {
 	
@@ -31,7 +30,6 @@ public class ValidateViewHandler extends Handler {
 				listener.onValidate();
 			break;
 		}
-		Log.v(TAG, "handleMessage-->"+msg.what);
 	}
 	
 	public interface OnValidateListener{

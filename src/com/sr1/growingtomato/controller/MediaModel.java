@@ -22,8 +22,8 @@ public class MediaModel {
 	 * ≤•∑≈º∆ ±…˘“Ù
 	 */
 	public void playTicTac() {
-		isPlaying = true;
 		stopPlayTicTac();
+		isPlaying = true;
 		ticTac = MediaPlayer.create(context, R.raw.tictac);
 		ticTac.setLooping(true);
 		ticTac.start();
