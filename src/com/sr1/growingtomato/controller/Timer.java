@@ -1,5 +1,7 @@
 package com.sr1.growingtomato.controller;
 
+import android.os.Looper;
+
 public class Timer extends Thread implements TimerControllerInterface {
 
 	public static final String TAG = "Timer";
@@ -35,6 +37,7 @@ public class Timer extends Thread implements TimerControllerInterface {
 
 	@Override
 	public void run() {
+		Looper.prepare();
 		while (isStart && startTime + duringTime > System.currentTimeMillis()) {
 			try {
 				Thread.sleep(500);
@@ -45,6 +48,7 @@ public class Timer extends Thread implements TimerControllerInterface {
 		if (listener != null)
 			listener.onTimeUp();
 		isStart = false;
+		Looper.loop();
 	}
 
 	@Override
