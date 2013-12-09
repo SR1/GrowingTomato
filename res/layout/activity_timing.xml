@@ -34,10 +34,10 @@
 
     <LinearLayout
         android:id="@+id/remark"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:visibility="gone" >
 
         <TextView
             android:layout_width="match_parent"
@@ -71,14 +71,20 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal" >
-        <Button 
-            android:text="关闭声音"
+
+        <Button
+            android:id="@+id/sounds"
+            android:onClick="soundsTroggle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button 
-            android:text="放弃"
+            android:layout_height="wrap_content"
+            android:text="关闭声音" />
+
+        <Button
+            android:id="@+id/giveup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="encourage"
+            android:text="放弃" />
     </LinearLayout>
 
 </LinearLayout>

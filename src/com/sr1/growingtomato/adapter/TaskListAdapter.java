@@ -3,6 +3,7 @@ package com.sr1.growingtomato.adapter;
 import java.util.ArrayList;
 
 import com.sr1.growingtomato.R;
+import com.sr1.growingtomato.activity.MainActivity;
 import com.sr1.growingtomato.activity.TimingActivity;
 import com.sr1.growingtomato.entity.Class;
 import com.sr1.growingtomato.entity.Task;
@@ -73,6 +74,9 @@ public class TaskListAdapter extends BaseAdapter {
 				Bundle bundle = new Bundle();
 				bundle.putSerializable("task", task);
 				context.startActivity(intent);
+				if(context instanceof MainActivity){
+					((MainActivity)context).finish();
+				}
 			}
 		});
 		return item;

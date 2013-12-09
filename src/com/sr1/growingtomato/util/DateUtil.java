@@ -11,4 +11,21 @@ public class DateUtil {
         return sdformat.format(new Date());
 	}
 
+	// 将剩余时间(毫秒)转换为 mm:ss 格式
+	public static String TransToString(long time) {
+		StringBuilder s = new StringBuilder();
+
+		int t;
+		t = (int) time / 1000 / 60;
+		if (t < 10)
+			s.append(0);
+		s.append(t + ":");
+		t = (int) time / 1000 % 60;
+		if (t < 10)
+			s.append(0);
+		s.append(t);
+
+		return s.toString();
+	}
+
 }

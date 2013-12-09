@@ -8,6 +8,9 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="16" />
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,7 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="TimingActivity"></activity>
+        <activity android:name="com.sr1.growingtomato.activity.TimingActivity" >
+        </activity>
     </application>
 
 </manifest>
