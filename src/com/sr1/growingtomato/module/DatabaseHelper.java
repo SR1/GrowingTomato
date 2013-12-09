@@ -32,7 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			+ "classId INTEGER NOT NULL DEFAULT 0, "
 			+ "reward TEXT NOT NULL DEFAULT '' );";
 
-	private static final String TASKS_SAMPLE_DATA = "INSERT INTO `tasks` (name, classId) VALUES ('比昨天的我更优秀！', 0);";
+	private static final String TASKS_SAMPLE_DATA = "INSERT INTO `tasks` (name, classId) VALUES ('比昨天的我更优秀！', 1);";
 
 	public static final String CLASSES = "classes";
 	public static final String CLASSES_ID = "id";
