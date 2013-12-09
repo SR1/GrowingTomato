@@ -10,6 +10,7 @@
     <string name="else_hint">其他</string>
     <string name="setting_hint">设置</string>
     <string name="about_hint">关于</string>
+    <string name="slide_to_add_hint">☜滑动添加成长任务哦~</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
