@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.sr1.growingtomato.R;
 import com.sr1.growingtomato.module.RewardModule;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -35,5 +36,15 @@ public class RewardActivity extends Activity {
 		Intent intent = new Intent(this, MainActivity.class);
 		startActivity(intent);
 		this.finish();
+	}
+
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 }

@@ -8,12 +8,11 @@ import com.sr1.growingtomato.controller.TimerControllerInterface.OnTimeUpListene
 import com.sr1.growingtomato.controller.ValidateViewHandler;
 import com.sr1.growingtomato.controller.ValidateViewHandler.OnValidateListener;
 import com.sr1.growingtomato.util.DateUtil;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.view.Window;
@@ -104,6 +103,7 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 		startUpdateView();
 		screenOn.on();
 		super.onResume();
+		MobclickAgent.onResume(this);
 	}
 
 	@Override
@@ -111,6 +111,7 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 		stopUpdateView();
 		screenOn.off();
 		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 	@Override

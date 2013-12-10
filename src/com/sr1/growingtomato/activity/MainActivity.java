@@ -7,6 +7,7 @@ import com.sr1.growingtomato.R;
 import com.sr1.growingtomato.adapter.TaskListAdapter;
 import com.sr1.growingtomato.entity.Task;
 import com.sr1.growingtomato.module.TaskModule;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -66,6 +67,16 @@ public class MainActivity extends FragmentActivity {
 			findViewById(R.id.taskList).setVisibility(View.VISIBLE);
 		}
 
+	}
+
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 }
