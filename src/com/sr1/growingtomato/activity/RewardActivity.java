@@ -26,6 +26,7 @@ public class RewardActivity extends Activity {
 		Random random = new Random();
 		random.setSeed(System.currentTimeMillis());
 		int positon = random.nextInt()%6;
+		positon = positon>0?positon:-positon;
 		RewardModule rewardModule = new RewardModule(this);
 		TextView reward = (TextView)findViewById(R.id.reward);
 		reward.setText(rewardModule.getRewardList().get(positon).getName());
