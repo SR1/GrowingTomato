@@ -45,7 +45,7 @@ public class Timer extends Thread implements TimerControllerInterface {
 				e.printStackTrace();
 			}
 		}
-		if (listener != null)
+		if (isStart && listener != null)
 			listener.onTimeUp();
 		isStart = false;
 		Looper.loop();

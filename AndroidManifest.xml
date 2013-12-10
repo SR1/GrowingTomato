@@ -31,4 +31,9 @@
         </activity>
     </application>
 
+    <meta-data
+        android:name="UMENG_APPKEY"
+        android:value="52a7041e56240b26a203fcd1" >
+    </meta-data>
+
 </manifest>
