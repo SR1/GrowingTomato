@@ -5,24 +5,6 @@
     tools:context=".RewardActivity" >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/reward"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="endPickReward"
-            android:text="确认" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/pickLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,23 +22,29 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <Button
+            <ImageView
+                android:id="@+id/reward1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:background="@color/FLAT_ORANGE"
+                android:contentDescription="@string/content_image_gift"
                 android:gravity="center"
                 android:onClick="pick"
-                android:text="1" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/gift" />
 
-            <Button
+            <ImageView
+                android:id="@+id/reward2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:background="@color/FLAT_ORANGE"
+                android:contentDescription="@string/content_image_gift"
                 android:gravity="center"
                 android:onClick="pick"
-                android:text="2" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/gift" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,23 +53,29 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <Button
+            <ImageView
+                android:id="@+id/reward3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:background="@color/FLAT_ORANGE"
+                android:contentDescription="@string/content_image_gift"
                 android:gravity="center"
                 android:onClick="pick"
-                android:text="3" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/gift" />
 
-            <Button
+            <ImageView
+                android:id="@+id/reward4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:background="@color/FLAT_ORANGE"
+                android:contentDescription="@string/content_image_gift"
                 android:gravity="center"
                 android:onClick="pick"
-                android:text="4" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/gift" />
         </LinearLayout>
 
         <LinearLayout
@@ -90,23 +84,50 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <Button
+            <ImageView
+                android:id="@+id/reward5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:background="@color/FLAT_ORANGE"
+                android:contentDescription="@string/content_image_gift"
                 android:gravity="center"
                 android:onClick="pick"
-                android:text="5" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/gift" />
+
+            <ImageView
+                android:id="@+id/reward6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/content_image_gift"
+                android:gravity="center"
+                android:onClick="pick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gift" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/resultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/reward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false" />
 
             <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/FLAT_ORANGE"
-                android:gravity="center"
-                android:onClick="pick"
-                android:text="6" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="endPickReward"
+                android:text="确认" />
         </LinearLayout>
     </LinearLayout>
 

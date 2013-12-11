@@ -11,9 +11,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
 public class RewardActivity extends Activity {
+
+	int rewardList[] = { R.id.reward1, R.id.reward2, R.id.reward3,
+			R.id.reward4, R.id.reward5, R.id.reward6, };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +29,19 @@ public class RewardActivity extends Activity {
 	public void pick(View v) {
 		Random random = new Random();
 		random.setSeed(System.currentTimeMillis());
-		int positon = random.nextInt()%6;
-		positon = positon>0?positon:-positon;
+		int positon = random.nextInt() % 6;
+		positon = positon > 0 ? positon : -positon;
+		for (int viewId : rewardList) {
+			if(viewId!=v.getId())
+				findViewById(viewId).setVisibility(View.GONE);
+		}
+		
+		//TranslateAnimation animation = new TranslateAnimation(fromXDelta, toXDelta, fromYDelta, toYDelta)
+		
 		RewardModule rewardModule = new RewardModule(this);
-		TextView reward = (TextView)findViewById(R.id.reward);
+		TextView reward = (TextView) findViewById(R.id.reward);
 		reward.setText(rewardModule.getRewardList().get(positon).getName());
-		findViewById(R.id.pickLayout).setVisibility(View.GONE);
+		findViewById(R.id.resultLayout).setVisibility(View.VISIBLE);
 	}
 
 	public void endPickReward(View v) {
