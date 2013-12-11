@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:paddingRight="6dp"
         android:contentDescription="@string/content_image_aim"
+        android:paddingRight="6dp"
         android:scaleType="center"
         android:src="@drawable/aim" />
 
@@ -37,11 +37,12 @@
             android:textSize="12sp" />
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/doit"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:text="Do it!" />
+        android:contentDescription="@string/content_image_start"
+        android:src="@drawable/play" />
 
 </LinearLayout>

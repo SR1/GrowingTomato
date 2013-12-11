@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,7 +55,7 @@ public class TaskListAdapter extends BaseAdapter {
 
 		TextView name = (TextView) item.findViewById(R.id.name);
 		TextView classname = (TextView) item.findViewById(R.id.class_name);
-		Button doit = (Button) item.findViewById(R.id.doit);
+		ImageButton doit = (ImageButton) item.findViewById(R.id.doit);
 
 		name.setText(task.getName());
 
