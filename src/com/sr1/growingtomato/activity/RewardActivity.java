@@ -17,7 +17,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RewardActivity extends Activity implements AnimationListener{
+public class RewardActivity extends Activity implements AnimationListener {
 
 	int rewardList[] = { R.id.reward1, R.id.reward2, R.id.reward3,
 			R.id.reward4, R.id.reward5, R.id.reward6, };
@@ -38,10 +38,10 @@ public class RewardActivity extends Activity implements AnimationListener{
 		animation.setAnimationListener(this);
 		animation.setDuration(1000);
 		for (int viewId : rewardList) {
-			if(viewId!=v.getId())
+			if (viewId != v.getId())
 				findViewById(viewId).startAnimation(animation);
 		}
-		
+
 		RewardModule rewardModule = new RewardModule(this);
 		TextView reward = (TextView) findViewById(R.id.reward);
 		reward.setText(rewardModule.getRewardList().get(positon).getName());
@@ -63,6 +63,10 @@ public class RewardActivity extends Activity implements AnimationListener{
 		MobclickAgent.onPause(this);
 	}
 
+	public void returnToMain(View v) {
+		onBackPressed();
+	}
+
 	@Override
 	public void onAnimationEnd(Animation animation) {
 
@@ -79,13 +83,13 @@ public class RewardActivity extends Activity implements AnimationListener{
 	@Override
 	public void onAnimationRepeat(Animation animation) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void onAnimationStart(Animation animation) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
