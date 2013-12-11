@@ -15,6 +15,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RewardActivity extends Activity implements AnimationListener{
 
@@ -71,6 +72,8 @@ public class RewardActivity extends Activity implements AnimationListener{
 		animation = new AlphaAnimation(0.1f, 1.0f);
 		animation.setDuration(1000);
 		result.startAnimation(animation);
+		String message = getResources().getString(R.string.get_a_reward);
+		Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
@@ -83,5 +86,12 @@ public class RewardActivity extends Activity implements AnimationListener{
 	public void onAnimationStart(Animation animation) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void onBackPressed() {
+		this.finish();
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
 	}
 }
