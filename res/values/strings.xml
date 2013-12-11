@@ -17,6 +17,8 @@
     <string name="content_image_aim">目标</string>
     <string name="content_image_start">开始</string>
     <string name="content_image_gift">礼物</string>
+    <string name="content_image_sounds">声音控制</string>
+    <string name="content_image_giveup">声音控制</string>
     <string name="finish_a_task">成长任务完成~好样的！来奖励下自己吧~！</string>
     <string name="encourage_message">坚持！90%的人就是这么放弃的，超越自己！</string>
     <string name="action_settings">Settings</string>

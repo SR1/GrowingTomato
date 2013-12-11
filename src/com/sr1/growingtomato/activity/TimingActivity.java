@@ -12,11 +12,13 @@ import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +26,7 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 		OnValidateListener, OnTimeUpListener {
 
 	Timer timer;
-	Button giveupBtn;
+	ImageButton giveupBtn;
 	MediaModel media;
 	ValidateViewHandler handler;
 	ScreenOnModel screenOn;
@@ -35,7 +37,7 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_timing);
-		giveupBtn = (Button) findViewById(R.id.giveup);
+		giveupBtn = (ImageButton) findViewById(R.id.giveup);
 
 		media = new MediaModel(this);
 		media.playTicTac();
@@ -56,13 +58,15 @@ public class TimingActivity extends Activity implements OnLongClickListener,
 	}
 
 	public void soundsTroggle(View v) {
+		Drawable src;
 		if (media.isPlaying()) {
 			media.stopPlayTicTac();
-			((TextView) v).setText("ø™∆Ù…˘“Ù");
+			src = getResources().getDrawable(R.drawable.sounds_off);
 		} else {
 			media.playTicTac();
-			((TextView) v).setText("πÿ±’…˘“Ù");
+			src = getResources().getDrawable(R.drawable.sounds_on);
 		}
+		((ImageButton) v).setImageDrawable(src);
 	}
 
 	private void giveup() {
